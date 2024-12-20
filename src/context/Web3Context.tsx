@@ -1,8 +1,4 @@
-import {
-    createContext,
-    useState, ReactNode,
-    useContext
-} from "react";
+import { createContext, useState, ReactNode, useContext } from "react";
 import { ethers } from "ethers";
 
 // Define types for our context
