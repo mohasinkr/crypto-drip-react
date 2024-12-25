@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.28;
 
 contract Faucet {
     address public owner;
@@ -14,7 +14,7 @@ contract Faucet {
     }
 
     function drip() public {
-        require(block.timestamp > lastDripTime + 1 days, "Faucet: Drip too soon");
+        require(block.timestamp > lastDripTime + 10 seconds, "Faucet: Drip too soon");
         dripBalances[msg.sender] += dripAmount;
         lastDripTime = block.timestamp;
     }
@@ -27,5 +27,9 @@ contract Faucet {
 
     function withdrawAll() public {
         withdraw(dripBalances[msg.sender]);
+    }
+
+    function getBalance() public view returns (uint256) {
+        return address(this).balance;
     }
 }
