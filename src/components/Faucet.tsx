@@ -42,7 +42,7 @@ const Faucet = () => {
   };
   
   return (
-    <div>
+    <div className="action-buttons">
       <button onClick={requestTokens} disabled={!account || loading}>
         {loading ? "Requesting..." : "Request Tokens"}
       </button>

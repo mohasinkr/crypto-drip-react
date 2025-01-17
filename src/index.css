@@ -51,6 +51,12 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

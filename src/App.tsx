@@ -6,7 +6,7 @@ const App = () => {
   return (
     <Web3Provider>
       <div>
-        <h1>Token Faucet</h1>
+        <h1>CryptoDrip Ethereum Faucet</h1>
         <WalletConnector />
         <Faucet />
       </div>
@@ -15,3 +15,4 @@ const App = () => {
 };
 
 export default App;
+  
